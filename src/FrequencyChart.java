@@ -2,7 +2,9 @@ import java.util.Scanner;
 
 public class FrequencyChart {
     //class stuff
+
     //instance variables
+
     private int[] beans;
     //constructor
     public FrequencyChart(int[] bean){
