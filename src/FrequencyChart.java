@@ -1,6 +1,8 @@
+/*
 import java.util.Scanner;
 
 public class FrequencyChart {
+
     //class stuff
 
     //instance variables
@@ -42,3 +44,4 @@ public class FrequencyChart {
         System.out.println(chart.makeChart());
     }
 }
+*/
