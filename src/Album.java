@@ -18,4 +18,12 @@ public class Album {
         result += "\nTime: " + playTime + " minutes";
         return result;
     }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getArtist() {
+        return artist;
+    }
 }

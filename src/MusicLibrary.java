@@ -37,4 +37,33 @@ public class MusicLibrary {
         }
         return result;
     }
+
+    public int findTitle(String title){
+        for(int i = 0; i < library.length; i++){
+            if(library[i].getTitle().equals(title) && library[i] != null){
+                return i;
+            }
+        }
+        System.out.println("This title doesn't exist in this library");
+        return -1;
+    }
+
+    public int findArtist(String artist){
+        for(int i = 0; i < library.length; i++){
+            if(library[i].getArtist().equals(artist) && library[i] != null){
+                return i;
+            }
+        }
+        System.out.println("This artist doesn't exist in this library");
+        return -1;
+    }
+
+    public Album getAlbum(int index){
+       if(index >= 0 && index < library.length){
+           return library[index];
+       }else {
+           System.out.println("Index is out of bounds");
+           return null;
+       }
+    }
 }
