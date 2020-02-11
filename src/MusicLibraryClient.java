@@ -36,9 +36,7 @@ public class MusicLibraryClient {
 
             //System.out.println("+++++++++++++++++++++++++++++++++++++++");
 
-            System.out.println("Test selection sort");
-
-            myLibrary.sortByTitle();
+            myLibrary.sortByArtist();
 
             System.out.println(myLibrary);
 
