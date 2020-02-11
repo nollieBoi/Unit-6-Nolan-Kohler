@@ -66,4 +66,19 @@ public class MusicLibrary {
            return null;
        }
     }
+
+    public void sortByTitle(){
+        Album temp;
+        int min;
+        for (int i = 0; i < library.length - 1; i++) {
+            min = i;
+            for (int scan = i + 1; scan < library.length; scan++) {
+                if(library[scan].getTitle().compareTo(library[min].getTitle()) < 0);
+                    min = scan;
+            }
+            temp = library[min];
+            library[min] = library[i];
+            library[i] = temp;
+        }
+    }
 }
