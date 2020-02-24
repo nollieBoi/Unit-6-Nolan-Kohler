@@ -1,9 +1,9 @@
-/*public class Array2DExplorer {
+public class Array2DExplorer {
     public static void main(String[] args) {
         int array [][] = {  {4,1,8,5},
                 {0,2,3,4},
                 {6,6,2,2} };
-        MyArray2DExplorer exp = new MyArray2DExplorer();
+        Array2DExplorer exp = new Array2DExplorer();
 
         System.out.println("Test evenRow: \n Row w/ odd, Expecting: false \n Actual: " + exp.evenRow(array,0));
         System.out.println("Test evenRow: \n Row w/o odd, Expecting: true \n Actual: " + exp.evenRow(array,2));
@@ -73,8 +73,14 @@
         System.out.println();
     }
 
-    public int minRow(int[][] nums, int row) {
-        //that looks through each element of the chosen row and returns the smallest integer from that row.
+    public int minRowPractice(int[][] nums, int row) {
+        int min = nums[row][0];
+        for(int i : nums[row]){
+            if(i < min){
+                min = i;
+            }
+        }
+        return min;
     }
 
     public int[] colMaxs(int[][] matrix) {
@@ -88,25 +94,82 @@
                 }
             }
         }
-        return colsMax[]
+        return colsMax;
     }
 
     public int[] allRowSums(int[][] data) {
         //that calculates the row sum for every row and returns each of the values in an array. Index i of the return array contains the sum of elements in row i.
+        int[] sumArray = new int[data.length];
+        for(int i = 0; i < data.length; i++){
+            int sum = 0;
+            for(int j = 0; j < data[i].length; j++){
+                sum += data[i][j];
+            }
+            sumArray[i] = sum;
+        }
+        return sumArray;
     }
 
     public double[] averageCol(int[][] nums) {
         //that calculates the average of each column in the array nums, and returns those values in an array of doubles.
-
+        double[] avgArray = new double[nums[0].length];
+        for(int i = 0; i < nums[i].length; i++){
+            int avg = 0;
+            for(int j = 0; j < nums.length; j++){
+                avg += nums[j][i];
+            }
+            avg = avg/nums.length;
+            avgArray[i] = avg;
+        }
+        return avgArray;
     }
 
     public int smallEven(int[][] matrix) {
         //That finds and returns the smallest even number in the array matrix. Assume that the array is filled with only positive ints.
+        
     }
 
     public static int biggestRow(int[][] nums) {
         //That returns the row index number that has the greatest sum of its elements.
 
     }
+
+    public boolean evenRow(int [][] mat, int row){
+        for(int i = 0; i < mat[row].length; i++){
+            if(mat[row][i] % 2 != 0){
+                return false;
+            }
+        }
+        return true;
+
+    }
+
+
+    public boolean oddColSum(int[][] nums, int col){
+        int sum = 0;
+        for(int i = 0; i < nums.length; i++){
+            sum = sum + nums[i][col];
+        }
+        if(sum%2 != 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+
+    public int[] minRow(int [][] mat){
+        int minRows = 0;
+        int min = mat[0][0];
+        for(int i = 0; i < mat.length; i++){
+            for(int j = 0; j < mat[0].length; j++){
+                if(mat[i][j] < min){
+                    min = mat[i][j];
+                    minRows = i;
+                }
+            }
+        }
+        return mat[minRows];
+
+    }
 }
-*/
