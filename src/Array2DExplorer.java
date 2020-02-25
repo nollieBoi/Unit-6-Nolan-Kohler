@@ -126,12 +126,30 @@ public class Array2DExplorer {
 
     public int smallEven(int[][] matrix) {
         //That finds and returns the smallest even number in the array matrix. Assume that the array is filled with only positive ints.
-        
+        int smallest = 0;
+        for(int i = 0; i < matrix.length; i++){
+            for(int j = 0; j < matrix[i].length; j++){
+                if(smallest > matrix[i][j] && matrix[i][j]%2 == 0){
+                    smallest = matrix[i][j];
+                }else{
+                    matrix = matrix;
+                }
+            }
+        }
+        return smallest;
     }
 
     public static int biggestRow(int[][] nums) {
         //That returns the row index number that has the greatest sum of its elements.
-
+        int greatest = 0;
+        int sum1 = 0;
+        int sum2 = 0;
+        for(int i = 0; i < nums.length; i++){
+            for(int j =0; j < nums[i].length; j++){
+                sum1 = sum1 + nums[i][j];
+            }
+            if()
+        }
     }
 
     public boolean evenRow(int [][] mat, int row){
