@@ -25,8 +25,8 @@ public class Array2DExplorer {
 
         System.out.println();
 
-        System.out.print("Test minRowAssignment: \n Expecting: 2 \n Actual: ");
-        System.out.println(exp.minRowAssignment(array, 2));
+       //System.out.print("Test minRowAssignment: \n Expecting: 2 \n Actual: ");
+        //System.out.println(exp.minRowAssignment(array, 2));
 
         System.out.println();
 
@@ -148,8 +148,9 @@ public class Array2DExplorer {
             for(int j =0; j < nums[i].length; j++){
                 sum1 = sum1 + nums[i][j];
             }
-            if()
+            //if()
         }
+        return greatest;
     }
 
     public boolean evenRow(int [][] mat, int row){
@@ -176,7 +177,7 @@ public class Array2DExplorer {
     }
 
 
-    public int[] minRow(int [][] mat){
+    public int[] minRowPractice(int [][] mat){
         int minRows = 0;
         int min = mat[0][0];
         for(int i = 0; i < mat.length; i++){
