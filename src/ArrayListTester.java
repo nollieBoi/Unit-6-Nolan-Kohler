@@ -2,10 +2,21 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ArrayListTester {
-    public static void removeZeros(ArrayList<Integer> list){
-        
+    public static void removeZeros(ArrayList<Integer> list) {
+        for (int i = 0; i < list.size(); i++) {
+            list.remove(i);
+            i--;
+        }
     }
-    public static void main(String[] args) {
+
+    public int countLetters(ArrayList list){
+        int count = 0;
+        for(int i = 0; i < list.size(); i++){
+            count = count + list;
+        }
+    }
+
+        public static void main(String[] args) {
         System.out.println("Test Remove Zeros");
         ArrayList<Integer> nums = new ArrayList<>(Arrays.asList(3,4,0,0,1,4,0,6,0));
         System.out.println("Starting List: " + nums);
