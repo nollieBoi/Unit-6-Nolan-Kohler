@@ -9,11 +9,17 @@ public class ArrayListTester {
         }
     }
 
-    public int countLetters(ArrayList list){
+    public int countLetters(ArrayList<String> list){
         int count = 0;
         for(int i = 0; i < list.size(); i++){
-            count = count + list;
+            String word = list.get(i);
+            count = count + word.length();
         }
+        return count;
+    }
+
+    public int findPosition(){
+
     }
 
         public static void main(String[] args) {
